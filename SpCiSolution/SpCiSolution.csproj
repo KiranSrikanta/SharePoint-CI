@@ -45,12 +45,14 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DummyWebPart\DummyWebPart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,8 +62,15 @@
     <None Include="DummyList\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{cc11e7a5-effc-460f-87b7-039008d05263}</SharePointProjectItemId>
     </None>
-    <None Include="Features\Feature1\Feature1.feature">
+    <None Include="DummyWebPart\DummyWebPart.webpart" />
+    <None Include="DummyWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{19680338-0583-4d1a-bb21-28aafbb0685e}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\DummyList\DummyList.feature">
       <FeatureId>{6ef82901-b2ff-46ac-9214-e277f7f6f81b}</FeatureId>
+    </None>
+    <None Include="Features\DummyWebpart\DummyWebpart.feature">
+      <FeatureId>{7c7072b9-37fc-4c48-b39f-4ecddb842f42}</FeatureId>
     </None>
     <None Include="key.snk" />
     <None Include="Package\Package.package">
@@ -76,8 +85,12 @@
     <Content Include="DummyList\DummyListInstance\Elements.xml" />
     <Content Include="DummyList\Elements.xml" />
     <Content Include="DummyList\Schema.xml" />
-    <Content Include="Features\Feature1\Feature1.Template.xml">
-      <DependentUpon>Feature1.feature</DependentUpon>
+    <Content Include="DummyWebPart\Elements.xml" />
+    <Content Include="Features\DummyList\DummyList.Template.xml">
+      <DependentUpon>DummyList.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\DummyWebpart\DummyWebpart.Template.xml">
+      <DependentUpon>DummyWebpart.feature</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
