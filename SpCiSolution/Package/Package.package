@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="ac0f110b-c500-4a37-a6a2-62c0fe9337f3" 
+        solutionId="ac0f110b-c500-4a37-a6a2-62c0fe9337f3" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="SpCiSolution"
+        sharePointProductVersion="15.0">
+</package>
