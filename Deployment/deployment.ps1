@@ -6,7 +6,7 @@ $solution = Get-SPSolution -Identity spcisolution.wsp
 
 if ($solution){
     write-host "Retracting the previous solution."
-    Uninstall-SPSolution -Identity SpCiSolution.wsp â€“WebApplication http://test2012 -Confirm:$false
+    Uninstall-SPSolution -Identity SpCiSolution.wsp –WebApplication http://test2012 -Confirm:$false
     while($solution.JobExists) {
         write-host "Retracting..."
         Start-Sleep -s 10
@@ -29,6 +29,6 @@ write-host $soln_path
 
 Add-SPSolution -LiteralPath $soln_path
 
-Install-SPSolution â€“Identity SpCiSolution.wsp â€“WebApplication http://test2012 -GACDeployment
+Install-SPSolution –Identity SpCiSolution.wsp –WebApplication http://test2012 -GACDeployment
 
 write-host "Deployemnt script finished execution."
